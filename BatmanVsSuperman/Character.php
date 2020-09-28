@@ -166,8 +166,11 @@ class Character
      *
      * @return self
      */
-    public function care()
+    public function care(): self
     {
+        $this->hp += 10;
+
+        return $this;
     }
 
     /**

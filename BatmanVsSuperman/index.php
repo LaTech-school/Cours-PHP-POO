@@ -63,6 +63,7 @@ function showStatus($p1, $p2)
     <?php $batman->superAttack($superman) ?><?php showStatus($batman, $superman) ?>
 
     Superman se soigne 
+    <?php $superman->care() ?><?php showStatus($batman, $superman) ?>
 
 
 </body>
