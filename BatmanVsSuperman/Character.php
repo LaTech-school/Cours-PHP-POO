@@ -109,9 +109,9 @@ class Character
      *
      * @return string
      */
-    public function sayHello(): string
+    public function sayHello(Character $opponent): string
     {
-        return "";
+        return $this->getName()." salue ". $opponent->getName();
     }
 
     /**
@@ -119,8 +119,24 @@ class Character
      *
      * @return self
      */
-    public function attack()
+    public function attack(Character $opponent, int $coef=1): self
     {
+        switch ($this->xp)
+        {
+            case self::NOVICE: // 1
+                $opponent->setHP( $opponent->getHP() - (10*$coef) );
+            break;
+            
+            case self::MEDIUM: // 2
+                $opponent->setHP( $opponent->getHP() - (20*$coef) );
+            break;
+
+            case self::EXPERT: // 3
+                $opponent->setHP( $opponent->getHP() - (30*$coef) );
+            break;
+        }
+
+        return $this;
     }
 
     /**
@@ -128,8 +144,11 @@ class Character
      *
      * @return self
      */
-    public function superAttack()
+    public function superAttack(Character $opponent)
     {
+        $this->attack($opponent, 2);
+
+        return $this;
     }
 
     /**
@@ -160,8 +179,4 @@ class Character
     {
     }
 
-    public function showStatus(): void
-    {
-        echo "(... ... ...)";
-    }
 }

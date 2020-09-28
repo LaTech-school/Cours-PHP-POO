@@ -10,6 +10,10 @@ require_once "Character.php";
 $batman = new Character("batman", Character::MEDIUM);
 $superman = new Character("Superman", Character::NOVICE);
 
+function showStatus($p1, $p2)
+{
+    echo "<br>(". $p1->getName() .": ".$p1->getHP()." | ".$p2->getHP()." :".$p2->getName().")<br><br>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,5 +41,29 @@ $superman = new Character("Superman", Character::NOVICE);
         <div>Points de vie : <?= $superman->getHp() ?></div>
         <div>Experience : <?= $superman->getXp() ?></div>
     </fieldset>
+
+    <hr>
+
+    <?php showStatus($batman, $superman) ?>
+
+    <hr>
+
+    <?= $batman->sayHello($superman) ?><?php showStatus($batman, $superman) ?>
+    <?= $superman->sayHello($batman) ?><?php showStatus($batman, $superman) ?>
+
+    Batman attaque Superman
+    <?php $batman->attack($superman) ?><?php showStatus($batman, $superman) ?>
+
+    Superman riposte d'une attaque ...
+    <?php $superman->attack($batman) ?><?php showStatus($batman, $superman) ?>
+    ... suivi d'une super attaque
+    <?php $superman->superAttack($batman) ?><?php showStatus($batman, $superman) ?>
+
+    Batman – Furax – fait une super attaque
+    <?php $batman->superAttack($superman) ?><?php showStatus($batman, $superman) ?>
+
+    Superman se soigne 
+
+
 </body>
 </html>
