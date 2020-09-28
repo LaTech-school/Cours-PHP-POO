@@ -22,12 +22,14 @@ class MyClass
     // Methodes
     // --
 
-    public function __construct(string $argument)
+    public function __construct(string $input)
     {
-        $this->property_1 = $argument;
+        $this->property_1 = $input;
+    }
 
-        echo $this->property_1." ----<br>";
-        echo "Un objet de MyClass est créé.<br>";
+    public function __destruct()
+    {
+        echo "Objet ". $this->property_1 ." détruit.<br>";
     }
 
     public function getProperty_1()
@@ -62,6 +64,9 @@ $myClass_bleu = new MyClass("bleu");
 
 // $myClass->property_1 = "AZERTYUI";
 // echo $myClass->property_1 ."<br>";
+
+unset($myClass_rouge);
+
 echo $myClass_rouge->getProperty_1() ."<br>";
 echo $myClass_bleu->getProperty_1() ."<br>";
 

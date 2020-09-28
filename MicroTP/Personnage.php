@@ -9,7 +9,7 @@ class Personnage
      */
     public $nom;
 
-    /**
+    /*-)àç! 
      * Age du personnage
      *
      * @var integer
