@@ -7,7 +7,7 @@ class Personnage
      *
      * @var string
      */
-    public $nom = "Francis";
+    public $nom;
 
     /**
      * Age du personnage
