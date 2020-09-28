@@ -15,17 +15,27 @@ class MyClass
     // Proprietes
     // --
 
-    public $property_1;
+    private $property_1;
     private $property_2 = "This is a property value !";
 
 
     // Methodes
     // --
 
-    public function __construct()
+    public function __construct(string $argument)
     {
+        $this->property_1 = $argument;
+
+        echo $this->property_1." ----<br>";
         echo "Un objet de MyClass est créé.<br>";
     }
+
+    public function getProperty_1()
+    {
+        return $this->property_1;
+    }
+
+
 
     public function method_1() 
     {
@@ -47,7 +57,16 @@ class MyClass
 }
 
 
-$myClass = new MyClass();
+$myClass_rouge = new MyClass("rouge");
+$myClass_bleu = new MyClass("bleu");
+
+// $myClass->property_1 = "AZERTYUI";
+// echo $myClass->property_1 ."<br>";
+echo $myClass_rouge->getProperty_1() ."<br>";
+echo $myClass_bleu->getProperty_1() ."<br>";
+
+
+
 
 // echo $myClass->property_2 ."<br>";
 
