@@ -16,7 +16,7 @@ class Personnage
      */
     public $age = 53;
 
-    
+
     /**
      * Dire bonjour
      *
@@ -36,5 +36,15 @@ class Personnage
     public function ditAurevoir(): string
     {
         return "Au revoir";
+    }
+
+    /**
+     * Affiche le nom du personnage
+     *
+     * @return string
+     */
+    public function afficheNom(): string
+    {
+        return $this->nom;
     }
 }
