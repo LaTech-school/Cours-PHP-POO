@@ -20,7 +20,21 @@ class MaClassEnfant extends MaClassParent
     {
         return "Ceci est une methode de la classe Enfant.";
     }
+    public function methodeParent()
+    {
+        return "Ceci est la methode parent surchargée dans la classe Enfant.";
+    }
 }
+
+class MaClassPetitEnfant extends MaClassEnfant
+{
+    public $proprietePetitEnfant = "Ceci est une propriété de la classe Petit Enfant.";
+    public function methodePetitEnfant()
+    {
+        return "Ceci est une methode de la classe Petit Enfant.";
+    }
+}
+
 
 echo "<h3>Chez le parent</h3>";
 $parent = new MaClassParent;
@@ -37,4 +51,15 @@ echo $enfant->proprieteParent."<br>";
 echo $enfant->proprieteEnfant."<br>";
 echo $enfant->methodeParent()."<br>";
 echo $enfant->methodeEnfant()."<br>";
+
+echo "<hr>";
+
+echo "<h3>Chez le petit enfant</h3>";
+$petitEnfant = new MaClassPetitEnfant;
+echo $petitEnfant->proprieteParent."<br>";
+echo $petitEnfant->proprieteEnfant."<br>";
+echo $petitEnfant->proprietePetitEnfant."<br>";
+echo $petitEnfant->methodeParent()."<br>";
+echo $petitEnfant->methodeEnfant()."<br>";
+echo $petitEnfant->methodePetitEnfant()."<br>";
 
