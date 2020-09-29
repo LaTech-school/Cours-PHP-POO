@@ -7,14 +7,45 @@ class Personnage
      *
      * @var string
      */
-    public $nom;
+    private $nom;
 
-    /*-)àç! 
+    /*
      * Age du personnage
      *
      * @var integer
      */
-    public $age = 53;
+    private $age;
+
+    public function __construct(string $nom, int $age)
+    {
+        $this->nom = $nom;
+        $this->age = $age;
+    }
+
+
+    /**
+     * Read the name
+     *
+     * @return string
+     */
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Write the name
+     *
+     * @param string $nom
+     * @return self
+     */
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
 
 
     /**
@@ -46,5 +77,29 @@ class Personnage
     public function afficheNom(): string
     {
         return $this->nom;
+    }
+
+    /**
+     * Get age du personnage
+     *
+     * @return  integer
+     */ 
+    public function getAge(): int
+    {
+        return $this->age;
+    }
+
+    /**
+     * Set age du personnage
+     *
+     * @param  integer  $age  Age du personnage
+     *
+     * @return  self
+     */ 
+    public function setAge(int $age): self
+    {
+        $this->age = $age;
+
+        return $this;
     }
 }
