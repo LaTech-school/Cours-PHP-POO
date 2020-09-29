@@ -54,10 +54,12 @@ function showStatus($p1, $p2)
     Batman attaque Superman
     <?php $batman->attack($superman) ?><?php showStatus($batman, $superman) ?>
 
-    Superman riposte d'une attaque ...
-    <?php $superman->attack($batman) ?><?php showStatus($batman, $superman) ?>
-    ... suivi d'une super attaque
-    <?php $superman->superAttack($batman) ?><?php showStatus($batman, $superman) ?>
+    Superman riposte d'une attaque suivi d'une super attaque
+    <?php 
+    $superman
+        ->attack($batman)
+        ->superAttack($batman) 
+    ?><?php showStatus($batman, $superman) ?>
 
     Batman – Furax – fait une super attaque
     <?php $batman->superAttack($superman) ?><?php showStatus($batman, $superman) ?>
@@ -65,6 +67,35 @@ function showStatus($p1, $p2)
     Superman se soigne 
     <?php $superman->care() ?><?php showStatus($batman, $superman) ?>
 
+    Batman tente une attaque secrète
+    <?php $batman->secretAttack($superman) ?><?php showStatus($batman, $superman) ?>
 
+    Superman encore affaiblie lance une double attaque
+    <?php 
+        $superman
+            ->attack($batman)
+            ->attack($batman)
+    ?>
+    <?php showStatus($batman, $superman) ?>
+
+    Batman répond d'une attaque simple suivi d'une attaque secrète
+    <?php $batman->attack($superman)->secretAttack($superman) ?><?php showStatus($batman, $superman) ?>
+
+    <hr>
+
+    <?php $batman->levelUp() ?>
+    <fieldset>
+        <legend>Personnage 1</legend>
+        <div>Nom : <?= $batman->getName() ?></div>
+        <div>Points de vie : <?= $batman->getHp() ?></div>
+        <div>Experience : <?= $batman->getXp() ?></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Personnage 2</legend>
+        <div>Nom : <?= $superman->getName() ?></div>
+        <div>Points de vie : <?= $superman->getHp() ?></div>
+        <div>Experience : <?= $superman->getXp() ?></div>
+    </fieldset>
 </body>
 </html>

@@ -10,21 +10,21 @@ class Character
      * 
      * @var int
      */
-    const NOVICE = 1;
+    const NOVICE = 9;
 
     /**
      * Level : Medium
      * 
      * @var int
      */
-    const MEDIUM = 2;
+    const MEDIUM = 4;
 
     /**
      * Level : expert
      * 
      * @var int
      */
-    const EXPERT = 3;
+    const EXPERT = 7;
 
 
     // properties definition
@@ -144,7 +144,7 @@ class Character
      *
      * @return self
      */
-    public function superAttack(Character $opponent)
+    public function superAttack(Character $opponent): self
     {
         $this->attack($opponent, 2);
 
@@ -156,9 +156,17 @@ class Character
      *
      * @return self
      */
-    public function secretAttack()
+    public function secretAttack(Character $opponent): self
     {
-        # code...
+        if ($opponent->getHP() < 50)
+        {
+            $opponent->setHP(0);
+        }
+        else {
+            echo "(Echec de l'attaque secrète ! :()";
+        }
+
+        return $this;
     }
 
     /**
@@ -178,8 +186,21 @@ class Character
      *
      * @return self
      */
-    public function levelUp()
+    public function levelUp(): self
     {
-    }
+        switch ($this->xp)
+        {
+            case self::NOVICE:
+                $this->setXP( self::MEDIUM );
+            break;
+            case self::MEDIUM:
+                $this->setXP( self::EXPERT );
+            break;
+            case self::EXPERT:
+                // Do nothing
+            break;
+        }
 
+        return $this;
+    }
 }
