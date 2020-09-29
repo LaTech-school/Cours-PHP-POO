@@ -1,6 +1,6 @@
 <?php 
 
-class Vehicule
+abstract class Vehicule
 {
     private $motor;
     private $color;
@@ -15,6 +15,8 @@ class Vehicule
             ->setColor($color)
         ;
     }
+
+    abstract public function azert();
     
     /**
      * Get the value of motor

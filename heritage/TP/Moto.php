@@ -11,4 +11,9 @@ class Moto extends Vehicule
         echo "tourne la clé<br>";
         echo "Accelère<br>";
     }
+
+    public function azert()
+    {
+        echo "Methode AZERT";
+    }
 }

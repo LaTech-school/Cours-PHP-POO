@@ -4,6 +4,12 @@ include_once "Vehicule.php";
 include_once "Voiture.php";
 include_once "Moto.php";
 
+// $vehicule = new Vehicule("electric", "pink");
+// echo "Motor : ". $vehicule->getMotor()."<br>";
+// echo "Color : ". $vehicule->getColor()."<br>";
+
+// echo "<hr>";
+
 $voiture_1 = new Voiture("thermic", "Red");
 
 echo "Motor : ". $voiture_1->getMotor()."<br>";
@@ -12,6 +18,7 @@ echo "Wheels : ". $voiture_1->getWheels()."<br>";
 echo "Doors : ". $voiture_1->getDoors()."<br>";
 echo "Start : ". $voiture_1->start()."<br>";
 echo "Open : ". $voiture_1->openDoor()."<br>";
+echo "azert : ". $voiture_1->azert()."<br>";
 // echo Voiture::WHEELS."<br>";
 // echo Voiture::DOORS."<br>";
 
@@ -28,5 +35,7 @@ echo "Start : ". $moto_1->start()."<br>";
 // {
     echo "Open : ". $moto_1->openDoor()."<br>";
 // }
+echo "azert : ". $moto_1->azert()."<br>";
+
 // echo Moto::WHEELS."<br>";
 // echo Moto::DOORS."<br>";
