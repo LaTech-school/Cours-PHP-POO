@@ -1,8 +1,15 @@
 <?php
 
-include_once "Vehicule.php";
-include_once "Voiture.php";
-include_once "Moto.php";
+// include_once "Vehicule.php";
+// include_once "Voiture.php";
+// include_once "Moto.php";
+
+function MonChargementAutomatique($classname)
+{
+    include_once $classname.".php"; 
+}
+spl_autoload_register("MonChargementAutomatique");
+
 
 // $vehicule = new Vehicule("electric", "pink");
 // echo "Motor : ". $vehicule->getMotor()."<br>";
