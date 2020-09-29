@@ -83,9 +83,19 @@ class Vehicule
         return null;
     }
 
+
+    public function openDoor()
+    {
+        if ($this->getDoors())
+        {
+            return "Ouvre la porte";
+        }
+    }
     
     public function start()
     {
+        echo "embrayage<br>";
+        echo "bouton start<br>";
     }
     
     public function stop()
