@@ -1,0 +1,24 @@
+{
+    "name": "osw3/xpl",
+    "description": "Xtended PHP Library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OSW3",
+            "email": "contact@osw3.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "osw3/fileinfo": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4" : {
+            "XPL\\" : "src/classes/"
+        }
+    }
+}

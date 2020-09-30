@@ -1,0 +1,93 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8381a7cc8fc4936e062a2d7f75f8b670",
+    "packages": [
+        {
+            "name": "osw3/fileinfo",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OSW3/Fileinfo.git",
+                "reference": "e7a918d6cdbd77fd4b11e871d20d873d8c66b92b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OSW3/Fileinfo/zipball/e7a918d6cdbd77fd4b11e871d20d873d8c66b92b",
+                "reference": "e7a918d6cdbd77fd4b11e871d20d873d8c66b92b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "OSW3": "src/"
+                },
+                "psr-4": {
+                    "OSW3\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "OSW3",
+                    "email": "contact@osw3.net"
+                }
+            ],
+            "description": "Analyse and Extract file info",
+            "time": "2019-09-12T22:02:36+00:00"
+        },
+        {
+            "name": "osw3/xpl",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OSW3/XPL.git",
+                "reference": "476da4ff9a81620651187776c467e2c937977357"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OSW3/XPL/zipball/476da4ff9a81620651187776c467e2c937977357",
+                "reference": "476da4ff9a81620651187776c467e2c937977357",
+                "shasum": ""
+            },
+            "require": {
+                "osw3/fileinfo": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "XPL\\": "src/classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "OSW3",
+                    "email": "contact@osw3.net"
+                }
+            ],
+            "description": "Xtended PHP Library",
+            "time": "2019-09-18T01:01:20+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,15 @@
+{
+    "name": "arnaud/composer",
+    "description": "Test de composer pour un projet en POO",
+    "type": "project",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Bob L'eponge",
+            "email": "bob@bikinibottom.net"
+        }
+    ],
+    "require": {
+        "osw3/xpl": "^1.2"
+    }
+}
