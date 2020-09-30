@@ -25,12 +25,13 @@ abstract class Vehicule
     {
         return $this->motor;
     }
-
+    
     /**
-     * Set the value of motor
+     * Undocumented function
      *
-     * @return  self
-     */ 
+     * @param string $motor
+     * @return self
+     */
     public function setMotor(string $motor): self
     {
         if (in_array($motor, ["electric", "thermic"]))
